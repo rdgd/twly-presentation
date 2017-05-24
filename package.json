@@ -1,0 +1,23 @@
+{
+  "name": "twly-presentation",
+  "version": "1.0.0",
+  "description": "Introduction to Node, NPM, Grunt, and Bower. Just the basics. Built with impress.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdgd/fed-tooling-slideshow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdgd/fed-tooling-slideshow/issues"
+  },
+  "homepage": "https://github.com/rdgd/fed-tooling-slideshow#readme",
+  "dependencies": {
+    "impress.js": "^0.6.0"
+  }
+}

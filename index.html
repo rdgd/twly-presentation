@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>TWLY: Wanna get DRY?</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <!--
+    NOTES:
+      - Pause for questions after each slide... say that you are going to do this before you start into the slides
+      - More academia around the DRY principal
+      - More actual usage in your terminal instead of gifs (more live coding)
+      - Advice on open source projects (public test builds and reporting, excellent documentation, clear developer guidelines (lint/code style, protocol around pull requests, etc...))
+  -->
+  <div id="impress">
+    <div id="intro" class="step text-center" data-x="-6200" data-y="-4300" data-z="-500" data-rotate-x="0" data-rotate-y="0" data-scale="2">
+      <p>
+        <h1 class="big">TWLY</h1>
+        <img src="assets/images/towel.png">
+      </p>
+    </div>
+
+    <div id="wanna" class="step text-center" data-x="-5200" data-y="-3300" data-z="-400" data-rotate-x="-40" data-rotate-y="-10" data-scale="2">
+      <h1 class="big">
+        Wanna
+      </h1>
+    </div>
+    <div id="get" class="step text-center" data-x="-4200" data-y="-3300" data-z="-300" data-rotate-x="-80" data-rotate-y="-20" data-scale="2">
+      <h1 class="big">
+        get
+      </h1>
+    </div>
+    <div id="dry" class="step text-center" data-x="-3200" data-y="-2300" data-z="-200" data-rotate-x="-120" data-rotate-y="-30" data-scale="2">
+      <h1 class="big" id="wanna-get-dry">
+        DRY?
+      </h1>
+    </div>
+    <div id="bower" class="step text-center" data-x="-2200" data-y="-1300" data-z="-100" data-rotate-x="-160" data-rotate-y="-40" data-scale="2">
+      <p>
+        A utility for duplicate code detection with a CLI and JavaScript API. 
+      </p>
+    </div>
+
+    <div id="internet-kid" class="step text-center" data-x="-1200" data-y="2300" data-z="0" data-rotate-x="-260" data-rotate-y="-40" data-scale="2">
+      <img style="height: 700px" src="./assets/images/naive-internet-kid.png" />
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-1500">
+      <h1>
+        Why <b>DRY</b>? 
+      </h1>
+      <q class="text-center">Don't Repeat Yourself</q>
+      <ul>
+        <li>But copy and paste is so easssssyyy</li>
+        <li>Future developers will hate you</li>
+        <li>Your future self will hate you</li>
+        <li>I hate you... #kiddingnotkidding</li>
+        <li>Updating the same thing in multiple places is unmaintainable (SSOT)</li>
+      </ul>
+      NOTE: After this slide do example with same code you created
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+      <h1>
+        How do I <b>DRY</b>? 
+      </h1>
+      <ul>
+        <li>Simple, just Don't Repeat Yourself!</li>
+        <li>Modularize... services, utilities, helpers, etc...</li>
+        <li>Yeah, but how do I <i>get</i> <b>DRY</b>?
+          <ol>
+            <li>Detect duplicate code</li>
+            <li>Refactor</li>
+            <li>Recur</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="-1500">
+      <h1>
+        Over-modularization 
+      </h1>
+      <p>It's not what I'm suggesting.</p>
+      <ul>
+        <li>left-pad</li>
+        <li>is-positive-integer</li>
+        <li>is-false</li>
+      </ul>
+    </div>
+
+    <div id="preach" class="step" data-x="3500" data-y="-1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-scale="1">
+      <!--<q class="text-center">
+        So what is TWLY good for?
+      </q>-->
+      <p class="text-center">
+        So what <i>exactly</i> is <b>TWLY</b> good for?
+      </p>
+      <!--<p class="text-right">
+      </p>-->
+    </div>
+
+    <div class="step slide" data-x="3500" data-y="-500">
+      <h1>
+        Three Things (that I can think of) 
+      </h1>
+      <ol>
+        <li>
+          Taking on legacy applications
+        </li>
+        <li>
+          Keeping developers honest
+        </li>
+        <li>
+          Making clever things?
+        </li>
+      </ol>
+    </div>
+
+    <div class="step slide" data-x="4500" data-y="-500">
+      <h1>
+        Legacy
+      </h1>
+      <p>The struggle is real... but also winnable!</p>
+      <img style="width:100%" src="./assets/images/old-ts-score.png" />
+      <img style="width:100%" src="./assets/images/new-ts-score.png" />
+      NOTE: What is the value of having fewer lines of code, fewer duplicate blocks...
+        faster delivery
+        easier to maintain
+        easier to debug
+        etc...
+    </div>
+
+    <div class="step slide" data-x="5500" data-y="-500">
+      <h1>
+        Keeping Devs Honest
+      </h1>
+      <ul>
+        <li>
+          Continuous Integration
+          <img style="width: 100%" src="./assets/images/twly-jenkins-example.png" />
+        </li>
+        <li>
+          Git hooks
+          <img style="width: 500px; display:block;" src="./assets/images/twly-hooks-example.png" />
+        </li>
+      </ul>
+    </div>
+
+    
+  <div class="step slide text-center" data-x="6500" data-y="-500">
+    <h1>
+      Making clever things
+    </h1>
+    <img id="almost-there" src="./assets/images/almost-there.jpg" />
+   </div>
+
+   <div id="how-to" class="step" data-x="7500" data-y="-500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-scale="1">
+      <!--<q class="text-center">
+        So what is TWLY good for?
+      </q>-->
+      <p class="text-center">
+        So how <i>exactly</i> do I use TWLY?
+      </p>
+      <!--<p class="text-right">
+      </p>-->
+    </div>
+
+    <div class="step slide" data-x="7500" data-y="1500">
+      <h1>
+        Step 0 - Install
+      </h1>
+      <h5>For general use in your terminal</h5>
+      <code>npm install twly -g</code>
+      <h5>For use during dev/testing</h5>
+      <code>npm install twly --save-dev</code>
+      <h5>For use in production</h5>
+      <code>npm install twly --save</code>
+    </div>
+
+    <div class="step slide" data-x="7500" data-y="2500">
+      <h1>
+        Configuration 
+      </h1>
+      <p>Defaults</p>
+      <pre>
+{
+  ignore: [
+    'node_modules/**/*.*',
+    'bower_components/**/*.*',
+    '.git/**/*.*'
+  ],
+  nodir: true,
+  logLevel: 'REPORT',
+  failureThreshold: 95,
+  exitOnFailure: true,
+  minLines: 4,
+  minChars: 100
+};
+      </pre>
+    </div>
+
+    <div class="step slide" data-x="8500" data-y="2500">
+      <h1>
+        Configuration 
+      </h1>
+      <p>User Options</p>
+      <ul>
+        <li>.trc file</li>
+        <li>Runtime config</li>
+      </ul>
+      <br>
+      <p>Config priority</p>
+      <ol>
+        <li>Runtime config</li>
+        <li>.trc file</li>
+        <li>Defaults</li>
+      </ol>
+    </div>
+
+    <div class="step slide" data-x="7500" data-y="3500" data-gif-path="assets/images/twly-help.gif">
+      <h1>
+        CLI Usage 
+      </h1>
+      <p>Getting acquainted</p>
+      <code>twly --help</code>
+      <div class="lice-cap-wrap">
+      </div>
+    </div>
+
+    <div class="step slide" data-x="8500" data-y="3500" data-gif-path="assets/images/twly-basic-usage.gif">
+      <h1>
+        CLI Usage
+      </h1>
+      <p>Basic analysis using TWLY defaults</p>
+      <code>twly "**/*.*"</code>
+      <div class="lice-cap-wrap">
+      </div>
+    </div>
+
+    <div class="step slide" data-x="9500" data-y="3500" data-gif-path="assets/images/twly-options-usage.gif">
+      <h1>
+        CLI Usage
+      </h1>
+      <p>Exercising Your Options</p>
+      <div class="lice-cap-wrap">
+      </div>
+    </div>
+
+    <div class="step slide" data-x="7500" data-y="4500" data-gif-path="assets/images/twly-js-api-usage.gif">
+      <h1>
+        JS API Usage
+      </h1>
+      <p>Check out <a target="_blank" href="https://github.com/rdgd/twly#configuration">the docs</a> for options</p>
+      <div class="lice-cap-wrap">
+      </div>
+    </div>
+
+    <div class="step" data-x="9500" data-y="4500">
+      <h1>
+        How does <b>TWLY</b> work?
+      </h1>
+    </div>
+
+    <div class="step slide" data-x="9500" data-y="6500">
+      <h1>
+        Four Stages 
+      </h1>
+      <ol>
+        <li>Configure</li>
+        <li>Read</li>
+        <li>Run</li>
+        <li>Report</li>
+      </ol>
+    </div>
+
+    <div id="code" class="step text-center" data-x="12500" data-y="6500" data-scale="3">
+      <img src="./assets/images/code-symbol.png" />
+    </div>
+
+    <div id="retro" class="step slide" data-x="12500" data-y="8500">
+      <h1>Lessons Learned</h1>
+      <ul>
+        <li>More complex than I expected</li>
+        <li>Writing more tests earlier would have been helpful</li>
+        <li>Made some personal compromises in the name of optimization</li>
+        <li>
+          Terseness vs Expressiveness
+          <ul>
+            <li>Started with terse variable names and lots of comments to explain them</li>
+            <li>Reverted to expressive variable names and fewer comments</li>
+          </ul>
+        </li>
+      </ul>
+      NOTE: Code snippet/comparison to illustrate the terseness vs expressiveness change
+    </div>
+
+    <div id="clever-things" class="step slide" data-x="14500" data-y="8500" data-gif-path="assets/images/proton-torpedos.gif">
+      <h1>Clever things?</h1>
+      <p><b><a href="http://twly.io" target="_blank">http://twly.io</a></b></p>
+      <div class="lice-cap-wrap"></div>
+    </div>
+
+    <div id="conclusion" class="step slide" data-x="16500" data-y="8500" data-gif-path="assets/images/proton-torpedos.gif">
+      <h1>Conclusion</h1>
+      <ul>
+        <li>TWLY: <a href="https://github.com/rdgd/twly" target="_blank">https://github.com/rdgd/twly</a></li>
+        <li>twly.io:
+          <ul>
+            <li>Source:<a href="https://github.com/rdgd/twly.io" target="_blank">https://github.com/rdgd/twly.io</a></li>
+            <li>Site:<a href="http://twly.io">http://twly.io</a></li>
+          </ul>
+        </li>
+        <li>Slides:<a href="https://github.com/rdgd/twly-presentation" target="_blank">https://github.com/rdgd/twly-presentation</a></li>
+        <li>My Github: <a href="https://github.com/rdgd" target="_blank">https://github.com/rdgd</a></li>
+        <li>My Email: <a href="mailto:ryan.is.gray@gmail.com">ryan.is.gray@gmail.com</a</li>
+      </ul>
+    </div>
+  
+    <div id="questions" class="step" data-x="2500" data-y="1500" data-scale="15">
+      <h1>Questions?</h1>
+    </div>
+    <div id="timmy" class="step" data-x="2500" data-y="1500" data-scale="15">
+      <div id="lords-of-the-underworld"></div>
+    </div>
+  </div>
+
+  <script src="node_modules/impress.js/js/impress.js"></script>
+  <script>
+  impress().init();
+
+  window.onload = function () {
+    var dry = document.getElementById('wanna-get-dry');
+    var almostthere = document.getElementById('almost-there')
+    dry.addEventListener('click', playAudioClip.bind(null, './assets/wanna-get-dry.mp3'));
+    almostthere.addEventListener('click', playAudioClip.bind(null, './assets/almostthere.mp3'));
+    function playAudioClip (path) {
+      var audio = document.createElement('audio');
+      audio.setAttribute('src', path);
+      audio.setAttribute('autoplay', 'true');
+      document.body.appendChild(audio);
+    }
+
+    document.addEventListener('impress:stepenter', function (e) {
+
+      var slide = e.target;
+      var dry = slide.querySelector('#wanna-get-dry');
+      if (dry) { playAudioClip('./assets/wanna-get-dry.mp3'); }
+      var timmy = slide.querySelector('#lords-of-the-underworld');
+      if (timmy) { playAudioClip('./assets/tim_song.mp3'); }
+      var gifWrap = slide.querySelector('.lice-cap-wrap');
+      var almostthere = slide.querySelector('#almost-there');
+      if (almostthere) { playAudioClip('./assets/almostthere.mp3'); }
+      if (!gifWrap) { return false; }
+      var existingImg = gifWrap.querySelector('.lice-cap-gif');
+      var imgPath = slide.getAttribute('data-gif-path');
+      var gif = document.createElement('img');
+
+      if (imgPath === null) { return false; }
+      if (existingImg) {
+        // Clear image if already added
+        gifWrap.removeChild(existingImg);
+      }
+      // Create img element w/ gif
+      gif.setAttribute('src', imgPath + '?q=' + Math.random());
+      gif.classList.add('lice-cap-gif');
+
+      gifWrap.appendChild(gif);
+    });
+  };
+  </script>
+</body>
+</html>
