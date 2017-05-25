@@ -40,13 +40,32 @@
         DRY?
       </h1>
     </div>
-    <div id="bower" class="step text-center" data-x="-2200" data-y="-1300" data-z="-100" data-rotate-x="-160" data-rotate-y="-40" data-scale="2">
+    <div id="summary" class="step text-center" data-x="-2200" data-y="-1300" data-z="-100" data-rotate-x="-160" data-rotate-y="-40" data-scale="2">
       <p>
-        A utility for duplicate code detection with a CLI and JavaScript API. 
+        An open source utility for duplicate code detection which exposes a CLI and JavaScript API. 
       </p>
     </div>
 
-    <div id="internet-kid" class="step text-center" data-x="-1200" data-y="2300" data-z="0" data-rotate-x="-260" data-rotate-y="-40" data-scale="2">
+    <div class="step" data-x="-200" data-y="2300" data-z="0" data-rotate-x="-260">
+      <q>Duplication in logic should be eliminated via abstraction; duplication in process should be eliminated via automation.</q>
+    </div>
+
+    <div class="step" data-x="1200" data-y="2300" data-z="0" data-rotate-x="-260">
+      <q>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</q>
+    </div>
+
+    <div class="step slide" data-x="2200" data-y="2300" data-z="0" data-rotate-x="-260">
+      <h1>What is <b>DRY</b>?</h1>
+      <q class="text-center">Don't Repeat Yourself</q>
+      <ul>
+        <li>The Pragmatic Programmer by: Andy Hunt and Dave Thomas</li>
+        <li>Don't do duplicate/unnecessary work</li>
+        <li>Makes for simpler, more maintainable, higher-quality applications</li>
+        <li>The cure to the CAMP (anti-pattern)</li>
+      </ul>
+    </div>
+
+    <div id="internet-kid" class="step text-center" data-x="4200" data-y="2300" data-z="0" data-rotate-x="-260" data-rotate-y="-40" data-scale="2">
       <img style="height: 700px" src="./assets/images/naive-internet-kid.png" />
     </div>
 
@@ -54,17 +73,13 @@
       <h1>
         Why <b>DRY</b>? 
       </h1>
-      <q class="text-center">Don't Repeat Yourself</q>
       <ul>
-        <li>But copy and paste is so easssssyyy</li>
         <li>Future developers will hate you</li>
         <li>Your future self will hate you</li>
         <li>I hate you... #kiddingnotkidding</li>
         <li>Updating the same thing in multiple places is unmaintainable (SSOT)</li>
       </ul>
-      NOTE: After this slide do example with same code you created
     </div>
-
     <div class="step slide" data-x="1000" data-y="-1500">
       <h1>
         How do I <b>DRY</b>? 
@@ -82,6 +97,10 @@
       </ul>
     </div>
 
+    <div id="code-1" class="step text-center" data-x="1500" data-y="-3500" data-scale="3">
+      <img src="./assets/images/code-symbol.png" />
+    </div>
+
     <div class="step slide" data-x="2000" data-y="-1500">
       <h1>
         Over-modularization 
@@ -94,7 +113,7 @@
       </ul>
     </div>
 
-    <div id="preach" class="step" data-x="3500" data-y="-1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-scale="1">
+    <div id="what-is-it-good-for" class="step" data-x="3500" data-y="-1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-scale="1">
       <!--<q class="text-center">
         So what is TWLY good for?
       </q>-->
@@ -107,11 +126,14 @@
 
     <div class="step slide" data-x="3500" data-y="-500">
       <h1>
-        Three Things (that I can think of) 
+        Four Things (that I can think of) 
       </h1>
       <ol>
         <li>
           Taking on legacy applications
+        </li>
+        <li>
+          Refactoring
         </li>
         <li>
           Keeping developers honest
@@ -129,14 +151,20 @@
       <p>The struggle is real... but also winnable!</p>
       <img style="width:100%" src="./assets/images/old-ts-score.png" />
       <img style="width:100%" src="./assets/images/new-ts-score.png" />
-      NOTE: What is the value of having fewer lines of code, fewer duplicate blocks...
-        faster delivery
-        easier to maintain
-        easier to debug
-        etc...
     </div>
 
     <div class="step slide" data-x="5500" data-y="-500">
+      <h1>
+        How does this help?
+      </h1>
+      <ul>
+        <li>Faster delivery</li>
+        <li>Easier to maintain code</li>
+        <li>Easier to debug code</li>
+      </ul>
+    </div>
+
+    <div class="step slide" data-x="6500" data-y="-500">
       <h1>
         Keeping Devs Honest
       </h1>
@@ -153,25 +181,20 @@
     </div>
 
     
-  <div class="step slide text-center" data-x="6500" data-y="-500">
+  <div class="step slide text-center" data-x="7500" data-y="-500">
     <h1>
       Making clever things
     </h1>
     <img id="almost-there" src="./assets/images/almost-there.jpg" />
    </div>
 
-   <div id="how-to" class="step" data-x="7500" data-y="-500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-scale="1">
-      <!--<q class="text-center">
-        So what is TWLY good for?
-      </q>-->
+   <div id="how-to" class="step" data-x="8500" data-y="-500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-scale="1">
       <p class="text-center">
         So how <i>exactly</i> do I use TWLY?
       </p>
-      <!--<p class="text-right">
-      </p>-->
     </div>
 
-    <div class="step slide" data-x="7500" data-y="1500">
+    <div class="step slide" data-x="8500" data-y="1500">
       <h1>
         Step 0 - Install
       </h1>
@@ -183,7 +206,7 @@
       <code>npm install twly --save</code>
     </div>
 
-    <div class="step slide" data-x="7500" data-y="2500">
+    <div class="step slide" data-x="8500" data-y="2500">
       <h1>
         Configuration 
       </h1>
@@ -205,7 +228,7 @@
       </pre>
     </div>
 
-    <div class="step slide" data-x="8500" data-y="2500">
+    <div class="step slide" data-x="9500" data-y="2500">
       <h1>
         Configuration 
       </h1>
@@ -223,7 +246,7 @@
       </ol>
     </div>
 
-    <div class="step slide" data-x="7500" data-y="3500" data-gif-path="assets/images/twly-help.gif">
+    <div class="step slide" data-x="8500" data-y="3500" data-gif-path="assets/images/twly-help.gif">
       <h1>
         CLI Usage 
       </h1>
@@ -233,7 +256,7 @@
       </div>
     </div>
 
-    <div class="step slide" data-x="8500" data-y="3500" data-gif-path="assets/images/twly-basic-usage.gif">
+    <div class="step slide" data-x="9500" data-y="3500" data-gif-path="assets/images/twly-basic-usage.gif">
       <h1>
         CLI Usage
       </h1>
@@ -243,7 +266,7 @@
       </div>
     </div>
 
-    <div class="step slide" data-x="9500" data-y="3500" data-gif-path="assets/images/twly-options-usage.gif">
+    <div class="step slide" data-x="10500" data-y="3500" data-gif-path="assets/images/twly-options-usage.gif">
       <h1>
         CLI Usage
       </h1>
@@ -252,7 +275,7 @@
       </div>
     </div>
 
-    <div class="step slide" data-x="7500" data-y="4500" data-gif-path="assets/images/twly-js-api-usage.gif">
+    <div class="step slide" data-x="8500" data-y="4500" data-gif-path="assets/images/twly-js-api-usage.gif">
       <h1>
         JS API Usage
       </h1>
@@ -261,13 +284,13 @@
       </div>
     </div>
 
-    <div class="step" data-x="9500" data-y="4500">
+    <div class="step" data-x="10500" data-y="4500">
       <h1>
         How does <b>TWLY</b> work?
       </h1>
     </div>
 
-    <div class="step slide" data-x="9500" data-y="6500">
+    <div class="step slide" data-x="10500" data-y="6500">
       <h1>
         Four Stages 
       </h1>
@@ -279,11 +302,11 @@
       </ol>
     </div>
 
-    <div id="code" class="step text-center" data-x="12500" data-y="6500" data-scale="3">
+    <div id="code" class="step text-center" data-x="13500" data-y="6500" data-scale="3">
       <img src="./assets/images/code-symbol.png" />
     </div>
 
-    <div id="retro" class="step slide" data-x="12500" data-y="8500">
+    <div id="retro" class="step slide" data-x="13500" data-y="8500">
       <h1>Lessons Learned</h1>
       <ul>
         <li>More complex than I expected</li>
@@ -300,13 +323,13 @@
       NOTE: Code snippet/comparison to illustrate the terseness vs expressiveness change
     </div>
 
-    <div id="clever-things" class="step slide" data-x="14500" data-y="8500" data-gif-path="assets/images/proton-torpedos.gif">
+    <div id="clever-things" class="step slide" data-x="15500" data-y="8500" data-gif-path="assets/images/proton-torpedos.gif">
       <h1>Clever things?</h1>
       <p><b><a href="http://twly.io" target="_blank">http://twly.io</a></b></p>
       <div class="lice-cap-wrap"></div>
     </div>
 
-    <div id="conclusion" class="step slide" data-x="16500" data-y="8500" data-gif-path="assets/images/proton-torpedos.gif">
+    <div id="conclusion" class="step slide" data-x="17500" data-y="8500" data-gif-path="assets/images/proton-torpedos.gif">
       <h1>Conclusion</h1>
       <ul>
         <li>TWLY: <a href="https://github.com/rdgd/twly" target="_blank">https://github.com/rdgd/twly</a></li>
@@ -322,10 +345,10 @@
       </ul>
     </div>
   
-    <div id="questions" class="step" data-x="2500" data-y="1500" data-scale="15">
+    <div id="questions" class="step" data-x="6500" data-y="1500" data-scale="15">
       <h1>Questions?</h1>
     </div>
-    <div id="timmy" class="step" data-x="2500" data-y="1500" data-scale="15">
+    <div id="timmy" class="step" data-x="3500" data-y="1500" data-scale="15">
       <div id="lords-of-the-underworld"></div>
     </div>
   </div>
